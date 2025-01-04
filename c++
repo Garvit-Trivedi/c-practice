@@ -982,6 +982,72 @@
 //     return 0;
 // }
 
+
+
+// // // // // // // // // // Que-28
+
+// // // // Approach-1
+
+// #include <iostream>
+// using namespace std;
+
+// void large(int num1, int num2) {
+//     if (num1 > num2) {
+//         cout << num1 << endl;
+//     } else {
+//         cout << num2 << endl;
+//     }
+// }
+
+// int main() {
+//     int num1 = 10;
+//     int num2 = 20;
+//     large(num1, num2);
+//     return 0;
+// }
+
+
+
+// // // // Approach-2
+
+
+
+// #include <iostream>
+// using namespace std;
+
+// void large(int num1, int num2) {
+//     cout << (num1 > num2 ? num1 : num2) << endl;
+// }
+
+// int main() {
+//     int num1=10;
+//     int num2=20;
+//     large(num1,num2);
+//     return 0;
+// }
+
+
+// #include <iostream>
+// #include <algorithm>
+// using namespace std;
+
+
+// void Max(int number1, int number2) {
+  
+//     cout << "The largest number is: " << max(number1, number2) << endl;
+// }
+
+// int main() {
+//     int number1 = 10; 
+//     int number2 = 20; 
+    
+//     Max(number1, number2);
+
+//     return 0;
+// }
+
+
+
 // 24. Write a program to remove whitespace from both ends of a string. Example: Input: " hello ", Output: "hello".
 
 // #include <iostream>
@@ -1105,6 +1171,25 @@
 
 
 
+// #include<iostream>
+// #include<string>
+// using namespace std;
+
+// string extension(string filename) {
+//     size_t pos = filename.find_last_of('.');
+//     if (pos != string::npos && pos != 0) {
+//         return filename.substr(pos + 1);
+//     }
+//     return "";
+// }
+
+// int main() {
+//     string filename = "coding.gita.students";
+//     cout << extension(filename) << endl;
+    
+//     return 0;
+// }
+
 
 // 26. Write a program to check if a string ends with a specific character.Example: Input: ("codinggita", "a"), Output: true.
 
@@ -1175,5 +1260,388 @@
 //     cout << "[";
 //     hello(a,b);
 //     cout << "]";
+//     return 0;
+// }
+
+
+
+// 31. Write a program to repeat a string a specified number of times.Example: Input: ("hello", 3), Output: "hellohellohello".
+
+// #include <iostream>
+// using namespace std;
+
+// string  reapeat(string str, int n){
+//     string result="";
+//     for(int i=0;i<n;i++){
+//         result+=str;
+//     }
+    
+
+//     return result;
+// }
+
+// int main(){
+//     string str="garvit";
+//     int n=2;
+    
+//     cout << "reapeat the string: " << reapeat(str,n);
+//     return 0;
+// }
+
+
+// #include <iostream>
+// #include<sstream>
+
+// using namespace std;
+
+// string reapeat(string str, int n){
+//     stringstream ss;
+    
+//     for(int i=0;i<n;i++){
+//         ss<< str;
+//     }
+//     return ss.str();
+// }
+
+// int main(){
+//     string str="garvit";
+//     int n=2;
+    
+//     cout << "repeat: " << reapeat(str, n);
+//     return 0;
+// }
+
+
+// 32.Write a program that categorizes a person’s age group based on the given age:
+
+
+
+
+// #include <iostream>
+// using namespace std;
+
+// void group(int age){
+//     if(age < 13){
+//         cout <<"child " << endl;
+//     }
+//     else if(age >=13 && age <=19){
+//         cout << "teenager" << endl;
+//     }
+//       else if (age >= 20 && age <= 59) {
+//          cout << "Adult" << endl;
+//       }
+//       else if (age >= 60) {
+//         cout << "Senior" << endl;}
+//         else {
+//         cout << "Invalid age" << endl;}
+// }
+
+// int main(){
+//     int age =45;
+//     group(age);
+//     return 0;
+// }
+
+
+
+
+
+//#include <iostream>
+//using namespace std;
+//
+//int main() {
+//    int age;
+//    cout << "Enter age: ";
+//    cin >> age;
+//    string category = (age < 0) ? "Invalid age" :
+//                      (age < 13) ? "Child" :
+//                      (age <= 19) ? "Teenager" :
+//                      (age <= 59) ? "Adult" :
+//                      "Senior";
+//                      
+//    cout << category << endl; 
+//    return 0;
+//}
+
+
+
+// void categorizeAgeGroup(int age) {
+//    switch (age) {
+//        case 0 ... 12:
+//            cout << "Child" << endl;
+//            break;
+//        case 13 ... 19:
+//            cout << "Teenager" << endl;
+//            break;
+//        case 20 ... 59:
+//            cout << "Adult" << endl;
+//            break;
+//        default:
+//            if (age >= 60)
+//                cout << "Senior" << endl;
+//            else
+//                cout << "Invalid age" << endl;
+//            break;
+//    }
+//}
+
+// int main() {
+//    int age;
+//    cout << "Enter age: ";
+//    cin >> age;
+//    categorizeAgeGroup(age);
+//    return 0;
+//}
+
+
+// 33. Write a program that takes a year as input and checks whether it is a century year (a year divisible by 100).
+
+// #include <iostream>  
+// using namespace std;
+
+// void century(int year) {
+    
+//     if (year % 100 == 0) {
+//         cout << year << " is a Century Year." << endl;  
+//     } else {
+//         cout << year << " is not a Century Year." << endl;  
+//     }
+// }
+
+// int main() {
+//     int year;  
+
+//     cout << "Enter a year: ";  
+//     cin >> year;  
+
+//     century(year);  
+//     return 0;  
+// }
+
+
+
+
+// #include <iostream>  
+// using namespace std;
+
+// void century(int year) {
+    
+//      (year % 100 == 0)? 
+//         cout << year << " is a Century Year." << endl;  
+//     
+//        : cout << year << " is not a Century Year." << endl;  
+//    
+// }
+
+// int main() {
+//     int year;  
+
+//     cout << "Enter a year: ";  
+//     cin >> year;  
+
+//     century(year);  
+//     return 0;  
+// }
+
+
+
+// #include <iostream>  
+// using namespace std;
+
+// void century(int year) {
+   
+//     (year % 100 == 0) && cout << year << " is a Century Year." << endl;
+//     (year % 100 != 0) && cout << year << " is not a Century Year." << endl;
+// }
+
+// int main() {
+//     int year;  
+//     cout << "Enter a year: "; 
+//     cin >> year;  
+
+//     century(year); 
+//     return 0;  
+// }
+
+
+// 34. Access and print the first and last element of the array arr = [10, 20, 30, 40, 50]. Output:[10,50]
+
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+    
+//     int arr[] = {10, 20, 30, 40, 50};
+
+    
+//     cout << "[" << arr[0] << ", " << arr[4] << "]" << endl;
+
+//     return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int arr[] = {10, 20, 30, 40, 50};
+//     int n = sizeof(arr) / sizeof(arr[0]);  
+    
+ 
+//     for (int i = 0; i < n; i++) {
+//         if (i == 0 || i == n - 1) {
+//             cout << arr[i] << " ";
+//         }
+//     }
+//     cout << endl;
+
+//     return 0;
+// }
+
+
+
+//#include <iostream>
+//using namespace std;
+//
+//int main() {
+//    int arr[] = {10, 20, 30, 40, 50};
+//    cout << "[" << arr[0] << ", " << arr[sizeof(arr)/sizeof(arr[0]) - 1] << "]" << endl;
+//    return 0;
+//}
+
+
+// LEET CODE Question=1961;
+
+// #include <iostream>
+// #include <vector>
+// #include <string>
+// using namespace std;
+
+// bool isPrefixString(string s, vector<string>& words) {
+//     string concatenated = "";
+//     for (const string& word : words) {
+//         concatenated += word;
+//         if (concatenated == s) {
+//             return true;
+//         }
+//         if (concatenated.size() > s.size()) {
+//             return false; 
+//         }
+//     }
+//     return false; 
+// }
+
+// int main() {
+//     string s = "iloveleetcode";
+//     vector<string> words = {"aefw","i", "love", "leetcode", "apples"};
+    
+//     if (isPrefixString(s, words)) {
+//         cout << "True" << endl;
+//     } else {
+//         cout << "False" << endl;
+//     }
+
+//     return 0;
+// }
+
+
+// 35. Print an inverted right-angled triangle pattern with n rows.
+
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int n; 
+//     cout << "Enter num ";
+//     cin >> n;
+    
+   
+//     for (int i = 0; i < n; i++) {
+        
+//         for (int j = 0; j < n - i; j++) {
+//             cout << "*";
+//         }
+//         cout << endl; 
+//     }
+
+//     return 0;
+// }
+
+
+
+
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int n; 
+//     cout << "Enter number";
+//     cin >> n;
+    
+    
+//     for (int i = 0; i < n; i++) {
+     
+//         cout << string(n - i, '*') << endl; 
+//     }
+
+//     return 0;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 36. Print a pyramid pattern with n rows.
+
+
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int n;
+//     cout << "Enter number: ";
+//     cin >> n;  
+
+   
+//     for (int i = 0; i < n; i++) {
+       
+//         for (int j = 0; j < n - i - 1; j++) {
+//             cout << " ";  
+//         }
+
+      
+//         for (int j = 0; j < 2 * i + 1; j++) {
+//             cout << "*";
+//         }
+
+//         cout << endl;  
+//     }
+
+//     return 0;
+// }
+
+
+// #include <iostream>
+// using namespace std;
+
+// int main(){
+//     int n=5;
+    
+//     for(int i=0;i<n;i++){
+//         string row="";
+        
+//         row+=string(n-i-1,' ');
+        
+//         row+=string(2*i+1,'*');
+        
+//         cout << row << endl;
+//     }
 //     return 0;
 // }
